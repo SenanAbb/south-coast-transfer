@@ -5,7 +5,7 @@ import Input from "./Input";
 
 function BookingForm() {
   return (
-    <form className="flex flex-col gap-5 bg-blue-900 bg-opacity-80 p-6 rounded-lg min-w-[550px]">
+    <form className="flex flex-col gap-5 bg-blue-900 bg-opacity-80 p-6 rounded-lg sm:min-w-[550px]">
       <h2 className="text-white text-center">Book Your Ride</h2>
       <Input type="text" placeholder="Origin" />
       <Input type="text" placeholder="Destination" />
