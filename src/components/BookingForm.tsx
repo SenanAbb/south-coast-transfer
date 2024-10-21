@@ -10,8 +10,8 @@ function BookingForm() {
       <Input type="text" placeholder="Origin" />
       <Input type="text" placeholder="Destination" />
       <div className="flex gap-4">
-        <Input type="date" placeholder="Date" />
-        <Input type="time" placeholder="Time" />
+        <Input type="date" placeholder="Date"/>
+        <Input type="time" placeholder="Time"/>
       </div>
       <Input type="number" placeholder="Number of passengers" min={1} max={8} />
       <Button text="Find Ride" onClick={() => alert("are you gei?")} />
