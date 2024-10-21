@@ -35,7 +35,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="h-[100px] bg-white fixed top-0 left-0 w-full z-50 drop-shadow-lg flex justify-center">
+    <nav className="h-[100px] bg-white absolute top-0 left-0 w-full z-50 drop-shadow-lg flex justify-center">
       <div className="w-[1200px] mx-10 flex items-center justify-between">
         <Image
           src="/images/logo.webp"
