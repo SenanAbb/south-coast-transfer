@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -17,7 +18,7 @@ const config: Config = {
           200: "#8B9597",
         },
         white: {
-          DEFAULT: "#E6E8E8",
+          DEFAULT: "#F5F5F5",
           pure: "#FFF",
         },
         yellow: {
@@ -29,6 +30,9 @@ const config: Config = {
           900: "#255A68",
         }
       },
+      backgroundImage: {
+        "hero": "url('/images/hero.webp')"
+      }
     },
   },
   plugins: [],
