@@ -35,7 +35,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="h-[100px] bg-white absolute top-0 left-0 w-full z-50 drop-shadow-lg flex justify-center">
+    <nav className="h-[70px] sm:h-[100px] bg-white absolute top-0 left-0 w-full z-50 drop-shadow-lg flex justify-center">
       <div className="w-[1200px] mx-10 flex items-center justify-between">
         <Image
           src="/images/logo.webp"
@@ -43,7 +43,15 @@ function Navbar() {
           width={90}
           height={90}
           priority
-          className="z-20"
+          className="hidden md:block z-20"
+        />
+        <Image
+          src="/images/logo.webp"
+          alt="Logo"
+          width={60}
+          height={60}
+          priority
+          className="sm:hidden z-20"
         />
         <div className="hidden lg:flex lg:gap-10">
           {links.map((link, index) => (

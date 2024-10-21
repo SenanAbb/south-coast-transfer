@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       {/* // HERO SECTION */}
-      <section className="absolute top-0 left-0 w-full h-full m-0 p-0 bg-hero bg-no-repeat bg-cover bg-center z-0 grid items-center pt-[120px]">
+      <section className="absolute top-0 left-0 w-full h-full m-0 p-0 bg-hero bg-no-repeat bg-cover bg-center z-0 grid items-center md:pt-[100px]">
         <div className="flex flex-col lg:flex-row mx-10 justify-around lg:items-center">
           <div className="flex flex-col gap-5 mb-10 lg:w-[50%] text-center lg:text-left">
             <h1 className="text-white text-4xl md:text-6xl">Your Luxury Journey Begins Here</h1>
