@@ -48,10 +48,10 @@ function Navbar() {
         <Image
           src="/images/logo.webp"
           alt="Logo"
-          width={60}
-          height={60}
+          width={75}
+          height={75}
           priority
-          className="sm:hidden z-20"
+          className="z-20 md:hidden"
         />
         <div className="hidden lg:flex lg:gap-10">
           {links.map((link, index) => (

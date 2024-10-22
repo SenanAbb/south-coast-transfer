@@ -33,13 +33,16 @@ section {
 h1 {
   font-size: 56px;
   font-weight: bold;
+  @apply text-black-900;
 }
 
 h2 {
   font-size: 34px;
   font-weight: semibold;
+  @apply text-black-900;
 }
 
 p {
+  @apply text-black-900;
   font-size: 18px;
 }
