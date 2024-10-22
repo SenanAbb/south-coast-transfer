@@ -6,13 +6,13 @@ import { useRouter } from "next/navigation";
 
 const fleet = [
   {
-    type: "Estandar",
+    type: "Standart",
     cars: "Skoda Octavia, Toyota Prius or similar",
     passengers: 4,
     img: "/images/skoda2.webp",
   },
   {
-    type: "Estandar large",
+    type: "Standart large",
     cars: "Volvo V60, Audi A4 Avant, BMW 3 Series Touring or similar",
     passengers: 4,
     img: "/images/audi2.webp",
@@ -24,13 +24,13 @@ const fleet = [
     img: "/images/s-class.webp",
   },
   {
-    type: "Van standar",
+    type: "Van Standart",
     cars: "Mercedes Vito, Ford Custom, Chevrolet Suburban or similar",
     passengers: 7,
     img: "/images/caravelle.webp",
   },
   {
-    type: "Van premium",
+    type: "Van Premium",
     cars: "Mercedes V Class, Cadillac Escalade or similar",
     passengers: 7,
     img: "/images/v-class.webp",
@@ -43,7 +43,7 @@ function FleetSection() {
   return (
     <section>
       <h1 className="text-center mb-20">Choose Your Perfect Ride</h1>
-      <div className="flex flex-col items-center gap-14 lg:flex lg:gap-14">
+      <div className="flex flex-col items-center gap-14 lg:flex lg:flex-row lg:gap-14">
         <CarCard
           type={fleet[0].type}
           cars={fleet[0].cars}

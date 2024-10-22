@@ -44,6 +44,7 @@ function Navbar() {
           height={90}
           priority
           className="hidden md:block z-20"
+          onClick={() => router.push("/")}
         />
         <Image
           src="/images/logo.webp"
@@ -52,6 +53,7 @@ function Navbar() {
           height={75}
           priority
           className="z-20 md:hidden"
+          onClick={() => router.push("/")}
         />
         <div className="hidden lg:flex lg:gap-10">
           {links.map((link, index) => (

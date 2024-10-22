@@ -9,7 +9,7 @@ interface Props {
 
 function CarCard({ type, seats, img }: Props) {
   return (
-    <div className="w-96 h-80 drop-shadow-lg bg-gray-100 flex flex-col gap-4 items-center my-auto justify-center text-center rounded-lg">
+    <div className="w-80 h-72 md:w-96 md:h-80 drop-shadow-xl bg-white-pure/80 flex flex-col gap-4 items-center my-auto justify-center text-center rounded-lg">
       <div className="relative">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-40 h-40 bg-blue-500 rounded-full"></div>
