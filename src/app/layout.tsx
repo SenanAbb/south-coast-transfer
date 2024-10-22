@@ -14,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="max-w-[1200px] bg-white mx-auto antialiased" suppressHydrationWarning>
-        <main className="mx-10">
+      <body className=" bg-white antialiased" suppressHydrationWarning>
+        <main className="m-0 p-0 overflow-x-hidden">
           <Navbar />
           {children}
         </main>

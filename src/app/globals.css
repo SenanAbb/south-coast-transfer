@@ -26,23 +26,21 @@ a:hover {
 }
 
 section {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  @apply my-24 px-10 lg:max-w-[1200px] lg:mx-auto;
 }
 
 h1 {
-  font-size: 56px;
-  font-weight: bold;
-  @apply text-black-900;
+  @apply text-black-900 text-5xl font-bold;
 }
 
 h2 {
-  font-size: 34px;
-  font-weight: semibold;
-  @apply text-black-900;
+  @apply text-black-900 text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-black-900 text-2xl font-semibold;
 }
 
 p {
-  @apply text-black-900;
-  font-size: 18px;
+  @apply text-black-900 text-lg;
 }
