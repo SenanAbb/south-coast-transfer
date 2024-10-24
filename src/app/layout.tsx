@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
 import "./globals.css";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "South Coast Transfer",
   description: "Book your transfer now!",
@@ -15,10 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-white antialiased" suppressHydrationWarning>
-        <main className="m-0 p-0 overflow-x-hidden">
-          <Navbar />
-          {children}
-        </main>
+        <Navbar />
+        <main className="m-0 p-0 overflow-x-hidden">{children}</main>
+        <Footer />
       </body>
     </html>
   );

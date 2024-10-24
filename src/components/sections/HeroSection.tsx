@@ -8,7 +8,7 @@ function HeroSection() {
           <h1 className="text-white hidden sm:block text-4xl md:text-6xl">
             Your Luxury Journey Begins Here
           </h1>
-          <p className="text-white hidden sm:block">
+          <p className="text-white hidden sm:block text-lg">
             Discover the finest way to travel along the sun-kissed coastlines
             with South Coast Transfer
           </p>

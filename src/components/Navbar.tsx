@@ -35,8 +35,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full h-[70px] sm:h-[100px] bg-white  drop-shadow-lg flex justify-center">
-      <div className="w-[1200px] mx-10 flex items-center justify-between">
+    <header className="absolute top-0 left-0 w-full h-[70px] sm:h-[100px] bg-white  drop-shadow-lg flex justify-center">
+      <nav className="w-[1200px] mx-10 flex items-center justify-between">
         <Image
           src="/images/logo.webp"
           alt="Logo"
@@ -72,7 +72,7 @@ function Navbar() {
             {!isOpen && <FaBars />}
           </button>
         </div>
-      </div>
+      </nav>
       <div
         className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -109,7 +109,7 @@ function Navbar() {
           />
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 
