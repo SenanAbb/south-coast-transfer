@@ -64,7 +64,7 @@ function Navbar() {
         </div>
         <Button
           text={"Book now"}
-          onClick={() => router.push("/")}
+          href="/"
           style="hidden lg:block"
         />
         <div className="lg:hidden">

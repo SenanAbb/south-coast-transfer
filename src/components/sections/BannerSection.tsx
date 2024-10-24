@@ -7,7 +7,7 @@ function BannerSection() {
       <Container>
         <div className="lg:hidden py-16 flex flex-col gap-10">
           <h1 className="text-white text-center">
-            Your Trusted Coastal Travel Partner
+            Your Trusted Partner in Luxurious Coastal Travel
           </h1>
           <div>
             <div className="flex items-center">
@@ -47,7 +47,7 @@ function BannerSection() {
 
         <div className="hidden lg:grid relative py-16 gap-10 z-0">
           <h1 className="text-white text-center mb-10">
-            Your Trusted Coastal Travel Partner
+            Your Trusted Partner in Luxurious Coastal Travel
           </h1>
           <div className="flex gap-20">
             <div>

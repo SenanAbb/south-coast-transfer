@@ -1,8 +1,5 @@
-"use client";
-
 import Button from "../Button";
 import CarCard from "../CarCard";
-import { useRouter } from "next/navigation";
 import Container from "../Container";
 
 const fleet = [
@@ -44,8 +41,6 @@ const fleet = [
 ];
 
 function FleetSection() {
-  const router = useRouter();
-
   return (
     <section>
       <Container>
@@ -74,7 +69,7 @@ function FleetSection() {
           />
         </div>
         <div className="w-full text-center mt-20">
-          <Button text="View all" onClick={() => router.push("/fleet")} />
+          <Button text="View all" href="/" />
         </div>
       </Container>
     </section>
