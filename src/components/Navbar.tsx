@@ -62,14 +62,14 @@ function Navbar() {
         onClick={toggleSidebar}
       ></div>
       <div
-        className={`lg:hidden fixed top-0 right-0 w-64 h-[360px] bg-white p-4 drop-shadow-2xl ${
+        className={`lg:hidden fixed top-0 right-0 w-64 h-[360px] bg-white p-4 drop-shadow-2xl z-50 ${
           isOpen ? "translate-x-0" : "hidden"
         }`}
       >
         <div className="flex justify-between items-center mb-4 pl-3">
           <div className="flex gap-6 items-center">
-            <p>ES</p>
-            <p>EN</p>
+            <p onClick={() => alert("Español")}>ES</p>
+            <p onClick={() => alert("English")}>EN</p>
           </div>
           <button
             onClick={toggleSidebar}

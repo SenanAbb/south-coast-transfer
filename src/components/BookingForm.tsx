@@ -13,7 +13,7 @@ function BookingForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(origin, destination, date, passengers);
+    alert(origin + destination + date + passengers);
   };
 
   return (
