@@ -38,7 +38,7 @@ function BookingForm() {
           setDestination(e.currentTarget.value);
         }}
       />
-      {/* <DateInput date={date} setDate={setDate} /> */}
+      <DateInput date={date} setDate={setDate} />
       <Input
         type="select"
         options={[1, 2, 3, 4, 5, 6, 7, 8]}
