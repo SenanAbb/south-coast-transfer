@@ -1,4 +1,4 @@
-import Select, { StylesConfig, SingleValue } from "react-select";
+import { useState } from "react";
 
 interface Props {
   type: string;
@@ -11,21 +11,6 @@ interface Props {
   max?: number;
 }
 
-const colourStyles: StylesConfig = {
-  control: (styles) => ({
-    ...styles,
-    backgroundColor: "#35474a",
-    borderColor: "#57d7f7",
-    color: "#35474a",
-    paddingTop: "6px",
-    paddingBottom: "6px",
-    paddingLeft: "2px",
-    cursor: "pointer",
-  }),
-  placeholder: (styles) => ({ ...styles, color: "rgb(245 245 245 / 0.8)" }),
-  singleValue: (styles) => ({ ...styles, color: "rgb(245 245 245 / 0.8)" }),
-};
-
 function Input({
   type,
   placeholder,
@@ -36,26 +21,33 @@ function Input({
   min,
   max,
 }: Props) {
+  const [selected, setSelected] = useState(false);
   return (
     <>
       {type === "select" ? (
-        <Select
-          options={options}
-          styles={colourStyles}
-          placeholder={placeholder}
-          value={options && options.find((option) => option.value === value)}
-          onChange={(newValue: unknown) => {
-            const selectedOption = newValue as SingleValue<SelectOption>;
-            if (onSelectChange && selectedOption) {
-              onSelectChange(selectedOption.value);
-            }
-          }}
-        />
+        <div className="w-full min-w-[200px]">
+          <select
+            className={`w-full p-3 border border-blue-500 bg-black-400 ${
+              !selected ? "text-[#8b9ca0]" : "text-white/80"
+            } placeholder-[#647174] rounded outline-none hover:border-white/80 appearance-none`}
+            onChange={(e) => {
+              if (onSelectChange) onSelectChange(e.target.value);
+              if (!selected) setSelected(!selected);
+            }}
+          >
+            <option value="" disabled selected>
+              Number of passengers...
+            </option>
+            {options?.map((option) => (
+              <option key={option.value}>{option.label}</option>
+            ))}
+          </select>
+        </div>
       ) : (
         <input
           type={type}
           placeholder={placeholder}
-          className="w-full p-3 border border-blue-500 bg-black-400 text-white/80 placeholder-white/80 rounded outline-none hover:border-white/80"
+          className="w-full p-3 border border-blue-500 bg-black-400 text-white/80 placeholder-[#8b9ca0] rounded outline-none hover:border-white/80"
           value={value}
           onChange={onChange}
           min={min}

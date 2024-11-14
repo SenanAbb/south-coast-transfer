@@ -34,7 +34,7 @@ const languangeVariants = {
 function Menu({ links }: MenuProps) {
   return (
     <motion.div
-      className="absolute left-0 h-screen w-screen bg-white"
+      className="absolute left-0 h-screen w-screen bg-white z-10"
       variants={menuVariants}
       initial="hidden"
       animate="visible"
