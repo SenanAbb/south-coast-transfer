@@ -8,12 +8,21 @@ import DateInput from "./DateInput";
 function BookingForm() {
   const [origin, setOrigin] = useState<string>("");
   const [destination, setDestination] = useState<string>("");
-  const [date, setDate] = useState<Date | null>(null);
+  const [date, setDate] = useState<Date | undefined>(undefined);
   const [passengers, setPassengers] = useState<number | undefined>(undefined);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert(origin + destination + date + passengers);
+  };
+
+  const check = () => {
+    return (
+      origin === "" ||
+      destination === "" ||
+      date === undefined ||
+      passengers === undefined
+    );
   };
 
   return (
@@ -38,17 +47,28 @@ function BookingForm() {
           setDestination(e.currentTarget.value);
         }}
       />
-      <DateInput date={date} setDate={setDate} />
-      <Input
-        type="select"
-        options={[1, 2, 3, 4, 5, 6, 7, 8]}
-        placeholder="Number of passengers"
-        value={passengers}
-        onSelectChange={(e) => {
-          setPassengers(parseInt(e.currentTarget.value));
-        }}
-      />
-      <Button text="Find Ride" />
+      <div className="grid grid-cols-2 gap-4">
+        <DateInput date={date} setDate={setDate} />
+        <Input
+          type="select"
+          options={[
+            { value: "1", label: "1" },
+            { value: "2", label: "2" },
+            { value: "3", label: "3" },
+            { value: "4", label: "4" },
+            { value: "5", label: "5" },
+            { value: "6", label: "6" },
+            { value: "7", label: "7" },
+            { value: "8", label: "8" },
+          ]}
+          placeholder="Passengers"
+          value={passengers}
+          onSelectChange={(passengers) => {
+            setPassengers(parseInt(passengers));
+          }}
+        />
+      </div>
+      <Button disabled={check()} text="Find Ride" />
     </form>
   );
 }

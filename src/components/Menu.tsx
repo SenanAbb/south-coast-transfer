@@ -58,7 +58,7 @@ function Menu({ links }: MenuProps) {
           </motion.li>
         ))}
       </ul>
-      <div className="flex flex-col items-center mt-52">
+      <div className="flex flex-col items-center mt-24">
         <div className="flex items-center gap-10">
           <motion.p
             variants={languangeVariants}
