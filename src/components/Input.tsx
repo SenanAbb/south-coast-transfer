@@ -1,4 +1,4 @@
-import Select, { StylesConfig } from "react-select";
+import Select, { StylesConfig, SingleValue } from "react-select";
 
 interface Props {
   type: string;
@@ -43,8 +43,12 @@ function Input({
           options={options}
           styles={colourStyles}
           placeholder={placeholder}
-          onChange={(e) => {
-            onSelectChange(e.value);
+          value={options && options.find((option) => option.value === value)}
+          onChange={(newValue: unknown) => {
+            const selectedOption = newValue as SingleValue<SelectOption>;
+            if (onSelectChange && selectedOption) {
+              onSelectChange(selectedOption.value);
+            }
           }}
         />
       ) : (
