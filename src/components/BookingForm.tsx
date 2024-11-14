@@ -47,27 +47,25 @@ function BookingForm() {
           setDestination(e.currentTarget.value);
         }}
       />
-      <div className="grid grid-cols-2 gap-4">
-        <DateInput date={date} setDate={setDate} />
-        <Input
-          type="select"
-          options={[
-            { value: "1", label: "1" },
-            { value: "2", label: "2" },
-            { value: "3", label: "3" },
-            { value: "4", label: "4" },
-            { value: "5", label: "5" },
-            { value: "6", label: "6" },
-            { value: "7", label: "7" },
-            { value: "8", label: "8" },
-          ]}
-          placeholder="Passengers"
-          value={passengers}
-          onSelectChange={(passengers) => {
-            setPassengers(parseInt(passengers));
-          }}
-        />
-      </div>
+      <DateInput date={date} setDate={setDate} />
+      <Input
+        type="select"
+        options={[
+          { value: "1", label: "1" },
+          { value: "2", label: "2" },
+          { value: "3", label: "3" },
+          { value: "4", label: "4" },
+          { value: "5", label: "5" },
+          { value: "6", label: "6" },
+          { value: "7", label: "7" },
+          { value: "8", label: "8" },
+        ]}
+        placeholder="Passengers"
+        value={passengers}
+        onSelectChange={(passengers) => {
+          setPassengers(parseInt(passengers));
+        }}
+      />
       <Button disabled={check()} text="Find Ride" />
     </form>
   );
