@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Button from './Button';
 import Input from './Input';
-import DateInput from './DateInput';
+// import DateInput from './DateInput';
 
 function BookingForm() {
   const [origin, setOrigin] = useState<string>('');
@@ -48,7 +48,14 @@ function BookingForm() {
         }}
       />
       {/* <DateInput date={date} setDate={setDate} /> */}
-      <Input type="date" value="" placeholder="Date" onChange={() => {}} />
+      <Input
+        type="date"
+        value=""
+        placeholder="Date"
+        onChange={() => {
+          setDate(new Date());
+        }}
+      />
       <Input
         type="select"
         options={[
