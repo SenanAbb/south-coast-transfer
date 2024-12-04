@@ -1,6 +1,6 @@
-import { AnimatePresence, useCycle } from "framer-motion";
-import MenuToggle from "./MenuToggle";
-import Menu from "./Menu";
+import { AnimatePresence, useCycle } from 'framer-motion';
+import MenuToggle from './MenuToggle';
+import Menu from './Menu';
 
 interface MobileNavbarProps {
   links: Link[];

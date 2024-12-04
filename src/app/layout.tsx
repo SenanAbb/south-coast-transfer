@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 export const metadata: Metadata = {
-  title: "South Coast Transfer",
-  description: "Book your transfer now!",
+  title: 'South Coast Transfer',
+  description: 'Book your transfer now!',
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 export default function RootLayout({

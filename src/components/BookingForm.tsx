@@ -57,6 +57,14 @@ function BookingForm() {
         }}
       />
       <Input
+        type="date"
+        value=""
+        placeholder="Date"
+        onChange={() => {
+          setDate(new Date());
+        }}
+      />
+      <Input
         type="select"
         options={[
           { value: '1', label: '1' },
