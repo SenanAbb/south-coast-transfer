@@ -59,7 +59,6 @@ function BookingForm() {
       <Input
         type="date"
         value=""
-        placeholder="Date"
         onChange={() => {
           setDate(new Date());
         }}

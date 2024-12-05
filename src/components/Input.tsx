@@ -46,7 +46,7 @@ function Input({
       ) : (
         <input
           type={type}
-          placeholder={placeholder}
+          placeholder={type === "date" ? "Date and time" : placeholder}
           className="w-full p-3 border border-blue-500 bg-black-400 text-white/80 placeholder-[#8b9ca0] rounded outline-none hover:border-white/80"
           value={value}
           onChange={onChange}
